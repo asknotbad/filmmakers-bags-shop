@@ -181,7 +181,7 @@
     left: 0;
     top: 0;
     background: rgba(0,0,0,0);
-    z-index: 1;
+    z-index: 8;
     width: 100%;
     height: 100vh;
     transition: .25s ease-in-out;
@@ -200,7 +200,7 @@
     height: 100vh;
     margin-right: auto;
     width: auto;
-    z-index: 1;
+    z-index: 9;
     box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
     padding: 96px 16px 16px 16px;
     white-space: nowrap;
