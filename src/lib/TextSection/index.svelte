@@ -39,4 +39,11 @@
     font-size: 20px;
     line-height: 24px;
   }
+  .content :global(img) {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+  }
 </style>
