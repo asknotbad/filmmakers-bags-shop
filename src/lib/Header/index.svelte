@@ -11,6 +11,10 @@
     isOpen = !isOpen;
   }
 
+  function closeNav() {
+    isOpen = false;
+  }
+
 </script>
 
 <!-- <li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li> -->
@@ -24,7 +28,7 @@
             <span class:open={isOpen}></span>
             <span class:open={isOpen}></span>
           </button>
-          <a href="/" class="logo">
+          <a href="/" class="logo" on:click={closeNav}>
             La Bagon<sup>®</sup>
           </a>
           <a href="/favorites" class="favorites">
@@ -47,25 +51,25 @@
 <nav class:open={isOpen}>
   <ul>
     <li>
-      <a class:active={$page.path === '/'} href="/">Home</a>
+      <a class:active={$page.path === '/'} href="/" on:click={closeNav}>Home</a>
     </li>
     <li>
-      <a class:active={$page.path === '/shop'} href="/shop">Shop</a>
+      <a class:active={$page.path === '/shop'} href="/shop" on:click={closeNav}>Shop</a>
     </li>
     <li>
-      <a class:active={$page.path === '/about'} href="/about">About</a>
+      <a class:active={$page.path === '/about'} href="/about" on:click={closeNav}>About</a>
     </li>
     <li>
-      <a class:active={$page.path === '/boutiques'} href="/boutiques">Boutiques</a>
+      <a class:active={$page.path === '/boutiques'} href="/boutiques" on:click={closeNav}>Boutiques</a>
     </li>
     <li>
-      <a class:active={$page.path === '/'} href="/">Contacts</a>
+      <a class:active={$page.path === '/contacts'} href="/contacts" on:click={closeNav}>Contacts</a>
     </li>
     <li class="light lined">
-      <a class:active={$page.path === '/'} href="/">Login</a>
+      <a class:active={$page.path === '/'} href="/" on:click={closeNav}>Login</a>
     </li>
     <li class="light">
-      <a class:active={$page.path === '/'} href="/">Register</a>
+      <a class:active={$page.path === '/'} href="/" on:click={closeNav}>Register</a>
     </li>
   </ul>
   <a href="/" class="copy">
