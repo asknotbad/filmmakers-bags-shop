@@ -1,12 +1,7 @@
-const catalogItems = [
-  {
-    name: 'Don’t Forget Small',
-    photo: [
-      'media/bag01.jpg',
-      'media/bag02.jpg',
-      'media/bag03.jpg',
-    ],
-  },
-];
+import { catalogItems } from './_catalog';
 
-export default catalogItems;
+export async function get({ params }) {
+  return {
+    body: catalogItems,
+  };
+};
