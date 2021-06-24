@@ -47,25 +47,25 @@
 <nav class:open={isOpen}>
   <ul>
     <li>
-      <a href="/">Home</a>
+      <a class:active={$page.path === '/'} href="/">Home</a>
     </li>
     <li>
-      <a href="/">Shop</a>
+      <a class:active={$page.path === '/shop'} href="/shop">Shop</a>
     </li>
     <li>
-      <a href="/">About</a>
+      <a class:active={$page.path === '/about'} href="/about">About</a>
     </li>
     <li>
-      <a href="/">Boutiques</a>
+      <a class:active={$page.path === '/boutiques'} href="/boutiques">Boutiques</a>
     </li>
     <li>
-      <a href="/">Contacts</a>
+      <a class:active={$page.path === '/'} href="/">Contacts</a>
     </li>
     <li class="light lined">
-      <a href="/">Login</a>
+      <a class:active={$page.path === '/'} href="/">Login</a>
     </li>
     <li class="light">
-      <a href="/">Register</a>
+      <a class:active={$page.path === '/'} href="/">Register</a>
     </li>
   </ul>
   <a href="/" class="copy">
@@ -122,7 +122,7 @@
     text-align: center;
     white-space: nowrap;
     color: #00406F;
-    font-family: 'Josefin Sans', serif;
+    font-family: serif;
     font-weight: 500;
     font-style: italic;
     font-size: 32px;
@@ -253,7 +253,7 @@
     font-style: italic;
     text-transform: none;
     font-weight: 500;
-    font-family: 'Josefin Sans', serif;
+    font-family: serif;
     font-size: 16px;
 
   }
