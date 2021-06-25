@@ -19,8 +19,27 @@
 </script>
 
 <script>
+  import Breadcrumbs from '$lib/Breadcrumbs/index.svelte';
   import CatalogItem from '$lib/CatalogItem/index.svelte';
+
   export let catalogItem;
+
+  let breadcrumbs = [
+    {
+      url: '/',
+      text: 'Home',
+    },
+    {
+      url: '/shop',
+      text: 'Shop',
+    },
+    {
+      text: catalogItem.name,
+    },
+  ];
+
 </script>
+
+<Breadcrumbs links={breadcrumbs} />
 
 <CatalogItem item={catalogItem} />

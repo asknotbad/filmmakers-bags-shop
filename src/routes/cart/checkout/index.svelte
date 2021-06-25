@@ -1,4 +1,5 @@
 <script>
+  import Breadcrumbs from '$lib/Breadcrumbs/index.svelte';
   import { numSpace } from '$lib/helpers';
   import { itemsInCart } from "$lib/stores";
 
@@ -14,7 +15,24 @@
     itemsInCart.set([]);
     isPayed = !isPayed;
   };
+
+  let breadcrumbs = [
+    {
+      url: '/',
+      text: 'Home',
+    },
+    {
+      url: '/cart',
+      text: 'Cart',
+    },
+    {
+      text: 'Checkout',
+    },
+  ];
+
 </script>
+
+<Breadcrumbs links={breadcrumbs} />
 
 <section>
   {#if $itemsInCart.length > 0}
