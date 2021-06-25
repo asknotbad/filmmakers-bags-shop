@@ -9,15 +9,13 @@
 
   function toggleOpen() {
     isOpen = !isOpen;
-  }
+  };
 
   function closeNav() {
     isOpen = false;
-  }
-
+  };
 </script>
 
-<!-- <li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li> -->
 <header>
   <div class="container">
     <div class="row">
@@ -31,7 +29,7 @@
           <a href="/" class="logo" on:click={closeNav}>
             La Bagon<sup>®</sup>
           </a>
-          <a href="/favorites" class="favorites">
+          <a href="/" class="favorites">
             <img src={heart} alt="">
           </a>
           <a href="/cart" class="cart">
