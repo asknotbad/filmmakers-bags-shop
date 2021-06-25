@@ -1,8 +1,8 @@
 <script>
-
+  import Cart from '$lib/Cart/index.svelte';
 </script>
 
-cart
+<Cart />
 
 <style>
 
