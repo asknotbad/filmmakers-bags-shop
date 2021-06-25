@@ -5,7 +5,7 @@
 </script>
 
 {#if item}
-  <a href="/catalog/{item.slug}">
+  <a href="/shop/{item.slug}">
     <img src={item.photo} alt="">
     <h3>
       {item.name}
@@ -37,7 +37,6 @@
     font-style: italic;
     font-weight: 500;
     font-size: 24px;
-    font-weight: 500;
   }
   .price {
     color: #8b6e60;
