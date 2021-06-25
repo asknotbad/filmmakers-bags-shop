@@ -1,7 +1,12 @@
 <script>
   import { numSpace } from '$lib/helpers';
+  import { itemsInCart } from "$lib/stores";
 
   export let item;
+
+  function addToCart() {
+    itemsInCart.set([...$itemsInCart, item]);
+  };
 </script>
 
 <section>
@@ -18,7 +23,7 @@
               € {numSpace(item.price)}
             </div>
             <div class="buttons">
-              <button>
+              <button on:click|preventDefault={addToCart}>
                 Add to cart
               </button>
             </div>

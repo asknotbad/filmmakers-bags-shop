@@ -25,7 +25,6 @@
   export let catalogItems;
 
   catalog.set(catalogItems);
-  console.log($catalog);
 </script>
 
 <CatalogItems />
