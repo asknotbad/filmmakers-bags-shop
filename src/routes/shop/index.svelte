@@ -19,13 +19,26 @@
 </script>
 
 <script>
+  import Breadcrumbs from '$lib/Breadcrumbs/index.svelte';
   import CatalogItems from '$lib/CatalogItems/index.svelte';
   import { catalog } from "$lib/stores";
 
   export let catalogItems;
 
+  let breadcrumbs = [
+    {
+      url: '/',
+      text: 'Home',
+    },
+    {
+      text: 'Shop',
+    },
+  ];
+
   catalog.set(catalogItems);
 </script>
+
+<Breadcrumbs links={breadcrumbs} />
 
 <CatalogItems />
 
